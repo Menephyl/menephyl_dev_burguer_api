@@ -1,0 +1,27 @@
+{
+  "name": "menephyl_dev_burguer_api",
+  "version": "1.0.0",
+  "description": "Criação de back end do projeto de curso do Full Stack da Dev Club",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Menephyl/menephyl_dev_burguer_api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Menephyl/menephyl_dev_burguer_api/issues"
+  },
+  "homepage": "https://github.com/Menephyl/menephyl_dev_burguer_api#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.6"
+  }
+}
