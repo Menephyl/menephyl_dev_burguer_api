@@ -18,8 +18,11 @@ routes.post('/session', SessionController.store);
 
 routes.use(authMiddleware);adminMiddleware
 routes.post('/products', upload.single('file'),ProductController.store);
-routes.get('/products',ProductController.index);
 
+routes.put('/products/:id', upload.single('file'),ProductController.update);
+routes.get('/products',ProductController.index);
+routes.post('/categories', upload.single('file'),CategoryController.store);
 routes.post('/categories',adminMiddleware ,CategoryController.store);
+routes.put('/categories/:id',adminMiddleware, upload.single('file'),CategoryController.update);
 routes.get('/categories',CategoryController.index);
-export default routes;
+export default routes; 
