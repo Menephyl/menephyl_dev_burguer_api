@@ -25,7 +25,7 @@ const newProduct = await Product.create({
     path:filename
 })
  return response.status(201).json({newProduct});
-        ;
+        
     }
     
     async index(_request,response){  
