@@ -16,6 +16,7 @@ jwt.verify(token,authConfig.secret,(error,decoded)=>{
     throw Error(); 
    }
    request.userId = decoded.id
+   request.userIsAdmin = decoded.admin
 });
 }catch(_error){
     return response.status(401).json({error:'Invalid token'});

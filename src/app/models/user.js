@@ -12,10 +12,9 @@ class User extends Model {
       {
         sequelize,
         tableName: 'users',
-        underscored: true,
-        timestamps: true,
       },
     );
+    return this;
   }
 }
 export default User;
