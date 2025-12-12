@@ -1,8 +1,8 @@
-// biome-ignore assist/source/organizeImports: <explanation>
+
 import { v4 } from 'uuid';
 import User from '../models/User.js';
 import * as Yup from 'yup';
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcrypt';
 class UserController {
   async store(request, response) {
     const schema = Yup.object({
@@ -12,13 +12,12 @@ class UserController {
       admin: Yup.boolean(),
     });
     // console.log('REQUEST', request.body);
-try {
-  schema.validateSync(request.body,{abortEarly:false, strict:true})
-} catch (err) {
-  console.log(err)
-  return response.status(400).json({error:err.errors})
-  
-}
+    try {
+      schema.validateSync(request.body, { abortEarly: false, strict: true });
+    } catch (err) {
+      console.log(err);
+      return response.status(400).json({ error: err.errors });
+    }
     const { name, email, password, admin } = request.body;
 
     const existingUser = await User.findOne({
@@ -30,7 +29,7 @@ try {
     if (existingUser) {
       return response.status(400).json({ message: `Email already taken!` });
     }
-const password_hash = await bcrypt.hash(password, 10)
+    const password_hash = await bcrypt.hash(password, 10);
     const user = await User.create({
       id: v4(),
       name,
