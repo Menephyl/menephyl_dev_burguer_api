@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Menephyl/menephyl_dev_burguer_api#readme",
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^9.0.1",
