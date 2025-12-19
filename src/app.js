@@ -18,6 +18,16 @@ app.use(cors(
 
 ));
 
+
+
+// class App {
+//     constructor(){
+//         this.app = express();
+//         this.app.use(cors());
+
+//     }
+// }
+
 app.use('/product-file', fileRouteConfig);
 app.use('/category-file', fileRouteConfig);
 
