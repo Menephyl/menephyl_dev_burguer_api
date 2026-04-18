@@ -15,3 +15,7 @@ make package.json of project
 install pnpm and EXPRESS 
 biome.js  -> code standardization tool performant linter for JavaScript, TypeScript, JSX, CSS
 docker assures standardization of environment with containers
+create database with docker and postgresql
+ORM -> Sequelize
+migrations 
+mvc software architecture
