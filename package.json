@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --watch src/server.js"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Menephyl/menephyl_dev_burguer_api.git"
@@ -16,5 +17,11 @@
     "url": "https://github.com/Menephyl/menephyl_dev_burguer_api/issues"
   },
   "homepage": "https://github.com/Menephyl/menephyl_dev_burguer_api#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.12"
+  }
 }
