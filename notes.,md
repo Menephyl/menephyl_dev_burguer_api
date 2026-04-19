@@ -19,3 +19,12 @@ create database with docker and postgresql
 ORM -> Sequelize
 migrations 
 mvc software architecture
+
+config routes.js 
+routes as knewed as endpoints
+UserController -> store, index, show, update, delete
+// store -> cria dado
+// index -> lista dados
+// show  ->> lista dado
+// update  ->> atualiza dado
+// delete  ->> remove dado 
