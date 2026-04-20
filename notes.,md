@@ -28,3 +28,6 @@ UserController -> store, index, show, update, delete
 // show  ->> lista dado
 // update  ->> atualiza dado
 // delete  ->> remove dado 
+
+user config 
+password encrypt

@@ -19,11 +19,13 @@
   "homepage": "https://github.com/Menephyl/menephyl_dev_burguer_api#readme",
   "description": "",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "express": "^5.2.1",
     "pg": "^8.20.0",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.37.8",
-    "uuid": "^13.0.0"
+    "uuid": "^13.0.0",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.12",
