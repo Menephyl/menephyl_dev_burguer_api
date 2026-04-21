@@ -38,3 +38,9 @@ the best solutions in just a few lines of code
 $ pnpm sequelize migration:create --name create-products-table
 
 pnpm sequelize db:migrate
+
+model product config 
+
+multer 
+
+images upload with multer
