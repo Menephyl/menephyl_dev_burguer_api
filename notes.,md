@@ -44,3 +44,6 @@ model product config
 multer 
 
 images upload with multer
+
+
+// erro 500 quebrou o backend 
