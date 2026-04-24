@@ -7,6 +7,7 @@ const authMiddleware = (request, response, next) => {
     if (!authToken) {
         return response.status(401).json({ error: 'Token not provided. Make login again to get a new token' });
     }
+
     const token = authToken.split(' ')[1];
 
     try {
@@ -16,7 +17,7 @@ const authMiddleware = (request, response, next) => {
             }
 
             request.userId = decoded.id;
-            request.userName = decoded.name;
+            // request.userName = decoded.name;
             request.userIsAdmin = decoded.admin;
         });
     } catch (_error) {
