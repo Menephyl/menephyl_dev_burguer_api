@@ -1,16 +1,17 @@
 import Sequelize, { Model } from 'sequelize';
 // dentro do sequelize ja existe uma classe  model
-import Category from './Category.js';
+
 class Product extends Model {
     static init(sequelize) {
         super.init({
             name: Sequelize.STRING,
             price: Sequelize.INTEGER,
             path: Sequelize.STRING,
+            offer: Sequelize.BOOLEAN,
             url: {
                 type: Sequelize.VIRTUAL,
                 get() {
-                    return `http://localhost:3001/product-file${this.path}`   // quando fazer o deploy colocar a rota do backend aqui
+                    return `http://localhost:3001/product-file/${this.path}`   // quando fazer o deploy colocar a rota do backend aqui
                 }
             }
         },

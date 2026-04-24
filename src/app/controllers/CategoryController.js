@@ -13,12 +13,9 @@ class CategoryController {
             return response.status(400).json({ error: err.errors })
         }
 
-        const userId = request.userId;
 
-        const user = await User.findByPk(userId); // find by primary key
-        if (!user.admin) {
-            return response.status(401).json({ error: "Unauthorized" })
-        }
+
+
         const { name } = request.body;
 
         const existingCategory = await Category.findOne({
