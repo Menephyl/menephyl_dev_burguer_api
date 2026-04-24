@@ -4,9 +4,9 @@ import ProductController from './app/controllers/ProductsController.js'
 import UserController from './app/controllers/UserController.js'
 import SessionController from './app/controllers/SessionController.js'
 import multerConfig from './config/multer.cjs'
-import authMiddleware from './middleware/auth.js'
 import CategoryController from './app/controllers/CategoryController.js'
 import adminMiddleware from './middleware/admin.js'
+import authMiddleware from './middleware/auth.js'
 const routes = new Router()
 const uploads = multer(multerConfig)
 
