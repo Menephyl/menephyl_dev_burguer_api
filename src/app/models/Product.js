@@ -1,11 +1,11 @@
 import Sequelize, { Model } from 'sequelize';
 // dentro do sequelize ja existe uma classe  model
+import Category from './Category.js';
 class Product extends Model {
     static init(sequelize) {
         super.init({
             name: Sequelize.STRING,
             price: Sequelize.INTEGER,
-            category: Sequelize.STRING,
             path: Sequelize.STRING,
             url: {
                 type: Sequelize.VIRTUAL,
@@ -19,6 +19,11 @@ class Product extends Model {
                 tableName: 'products',
             },
         );
+        return this;
+    }
+
+    static associate(models) {
+        this.belongsTo(models.Category, { foreignKey: 'category_id', as: 'category' })
     }
 }
 
