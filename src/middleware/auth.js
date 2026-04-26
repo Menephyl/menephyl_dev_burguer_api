@@ -1,10 +1,10 @@
 import jwt from 'jsonwebtoken';
 import authConfig from '../config/auth.js';
-
 const authMiddleware = (request, response, next) => {
     const authToken = request.headers.authorization;
 
     if (!authToken) {
+
         return response.status(401).json({ error: 'Token not provided. Make login again to get a new token  aa' });
     }
 
@@ -17,7 +17,7 @@ const authMiddleware = (request, response, next) => {
             }
             console.log(decoded)
             request.userId = decoded.id;
-            // request.userName = decoded.name;
+            request.userName = decoded.name;
             request.userIsAdmin = decoded.admin;
         });
     } catch (_error) {

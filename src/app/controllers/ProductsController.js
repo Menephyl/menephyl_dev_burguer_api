@@ -15,8 +15,13 @@ class ProductController {
         } catch (err) {
             return response.status(400).json({ error: err.errors })
         }
-        const { name, price, category_id, offer } = request.body
-        const { filename } = request.file
+
+
+
+        const { filename } = request.file;
+        const { name, price, category_id, offer } = request.body;
+
+
         const newProduct = await Product.create({
             name,
             price,
