@@ -15,10 +15,13 @@ routes.post('/session', SessionController.store)
 
 routes.use(authMiddleware)
 
-routes.post('/products', adminMiddleware, uploads.single('file'), ProductController.store)
-routes.get('/products', ProductController.index)
+routes.post('/products', adminMiddleware, uploads.single('file'), ProductController.store,)
 
-routes.post('/categories', adminMiddleware, CategoryController.store)
-routes.get('/categories', CategoryController.index)
+routes.put('/products/:id', adminMiddleware, uploads.single('file'), ProductController.update,)
+
+routes.get('/products', ProductController.index,)
+
+routes.post('/categories', adminMiddleware, uploads.single('file'), CategoryController.store,)
+routes.get('/categories', CategoryController.index,)
 
 export default routes

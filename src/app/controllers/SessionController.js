@@ -7,11 +7,11 @@ class SessionController {
     async store(request, response) {
         const schema = Yup.object({
             email: Yup.string().email().required(),
-            password: Yup.string().min(6).required(),
+            password: Yup.string().required().min(6),
         })
 
         const isValid = await schema.isValid(request.body, {
-            abortEarly: false,
+            abortEarly: false,  // comentar p validar cada campo individualmente 
             strict: true,
         })
         const emailOrPasswordIncorrect = () => {
@@ -41,11 +41,11 @@ class SessionController {
         const isPasswordCorrect = await bcrypt.compare(password, existingUser.password_hash)
 
         if (!isPasswordCorrect) {
-            emailOrPasswordIncorrect()
+            return emailOrPasswordIncorrect()
         }
 
 
-        const token = jwt.sign({ id: existingUser.id, admin: existingUser.admin }, authConfig.secret, { expiresIn: authConfig.expiresIn, })
+        const token = jwt.sign({ id: existingUser.id, name: existingUser.name, admin: existingUser.admin }, authConfig.secret, { expiresIn: authConfig.expiresIn, })
 
         return response.status(200).json({
             ok: true,

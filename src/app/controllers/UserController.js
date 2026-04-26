@@ -1,5 +1,7 @@
 import { v4 } from 'uuid';
+
 import User from '../models/User.js';
+
 import * as Yup from 'yup'
 import bcrypt from 'bcrypt'
 class UserController {
@@ -7,7 +9,7 @@ class UserController {
     const schema = Yup.object({
       name: Yup.string().required(),
       email: Yup.string().email().required(),
-      password: Yup.string().min(6).required(),
+      password: Yup.string().required().min(6),
       admin: Yup.boolean()
     })
 
