@@ -5,13 +5,15 @@ import UserController from './app/controllers/UserController.js'
 import SessionController from './app/controllers/SessionController.js'
 import multerConfig from './config/multer.cjs'
 import CategoryController from './app/controllers/CategoryController.js'
-import adminMiddleware from './middleware/admin.js'
-import authMiddleware from './middleware/auth.js'
+import adminMiddleware from './app/middleware/admin.js'
+import authMiddleware from './app/middleware/auth.js'
+import OrderController from './app/controllers/OrderController.js'
+
 const routes = new Router()
 const uploads = multer(multerConfig)
 
 routes.post('/users', UserController.store)
-routes.post('/session', SessionController.store)
+routes.post('/sessions', SessionController.store)
 
 routes.use(authMiddleware)
 
@@ -26,5 +28,10 @@ routes.post('/categories', adminMiddleware, uploads.single('file'), CategoryCont
 routes.put('/categories/:id', adminMiddleware, uploads.single('file'), CategoryController.update,)
 
 routes.get('/categories', CategoryController.index,)
+
+routes.post('/orders', OrderController.store)
+routes.put('/orders/:id', adminMiddleware, OrderController.update)
+routes.get('/orders', OrderController.index)
+
 
 export default routes
