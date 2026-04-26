@@ -22,6 +22,9 @@ routes.put('/products/:id', adminMiddleware, uploads.single('file'), ProductCont
 routes.get('/products', ProductController.index,)
 
 routes.post('/categories', adminMiddleware, uploads.single('file'), CategoryController.store,)
+
+routes.put('/categories/:id', adminMiddleware, uploads.single('file'), CategoryController.update,)
+
 routes.get('/categories', CategoryController.index,)
 
 export default routes
