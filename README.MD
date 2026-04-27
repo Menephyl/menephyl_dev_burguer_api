@@ -40,14 +40,14 @@ git clone <https://github.com/Matheus-Figueiredo-Dev/Devburguer-api.git>
 cd Devburguer-api
 
 1. **Instale as dependências**:
-yarn
+
 
 2. **Configure as variáveis de ambiente**:
 Crie um arquivo .env na raiz do projeto e adicione as variáveis necessárias:
 
-PORT=3000
-DATABASE_URL=postgres://user:password@localhost:5432/devburguer
-MONGO_URL=mongodb://localhost:27017/devburguer
+PORT=3001
+DATABASE_URL=postgres://user:password@localhost:5432/devburguer-db
+MONGO_URL=mongodb://localhost:27017/devburguer-db
 JWT_SECRET=sua_chave_secreta
 STRIPE_SECRET_KEY=sua_chave_stripe
 
