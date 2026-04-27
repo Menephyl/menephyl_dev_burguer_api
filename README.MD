@@ -1,4 +1,5 @@
-🍔 DevBurguer - Back-End Este é o back-end do projeto DevBurguer, uma aplicação completa que simula o funcionamento real de uma hamburgueria. O sistema foi dividido em duas partes — back-end e front-end — com foco total em criar uma estrutura robusta, segura e escalável para gerenciar usuários, produtos, categorias, pedidos e transações financeiras.
+🍔 DevBurguer - Back-End - 
+Este é o back-end do projeto DevBurguer, uma aplicação completa que simula o funcionamento real de uma hamburgueria. O sistema foi dividido em duas partes — back-end e front-end — com foco total em criar uma estrutura robusta, segura e escalável para gerenciar usuários, produtos, categorias, pedidos e transações financeiras.
 
 🧠 Objetivo Desenvolver a estrutura completa de um sistema de pedidos de uma hamburgueria com autenticação, banco de dados relacional e não-relacional, validação de dados, upload de arquivos e integração com sistema de pagamento.
 
