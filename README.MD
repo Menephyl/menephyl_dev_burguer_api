@@ -113,13 +113,16 @@ Como o foco atual é o desenvolvimento do Back-End, o uso do **Insomnia** recebe
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/Matheus-Figueiredo-Dev/Devburguer-api.git
+git clone https://github.com/Yantel/Menephyl_dev_burguer_api.git
 cd Devburguer-api
 ```
 
 <<<<<<< HEAD
-### 2. Instale as dependências
+
+### 2. Instale as dependências  
+
 =======
+
 1. **Instale as dependências**:
 
 >>>>>>> 28aaa36f67ad3c0b3115bde6f0bb4160eb267552
@@ -129,6 +132,7 @@ yarn install
 ```
 
 <<<<<<< HEAD
+
 ### 3. Suba os bancos de dados com Docker
 
 Certifique-se de que possui o **Docker** instalado e rodando. Caso utilize comandos manuais ou compose, inicie seus contêineres do PostgreSQL e MongoDB para preparar a base da aplicação.
@@ -138,14 +142,9 @@ Certifique-se de que possui o **Docker** instalado e rodando. Caso utilize coman
 Crie um arquivo `.env` na raiz do projeto e adicione as variáveis necessárias:
 
 ```env
-PORT=3000
-DATABASE_URL=postgres://user:password@localhost:5432/devburguer
-MONGO_URL=mongodb://localhost:27017/devburguer
-=======
 PORT=3001
 DATABASE_URL=postgres://user:password@localhost:5432/devburguer-db
 MONGO_URL=mongodb://localhost:27017/devburguer-db
->>>>>>> 28aaa36f67ad3c0b3115bde6f0bb4160eb267552
 JWT_SECRET=sua_chave_secreta
 STRIPE_SECRET_KEY=sua_chave_stripe
 ```
@@ -168,5 +167,5 @@ yarn dev
 
 ### 7. Teste a API no Insomnia
 
-- Com a API rodando (por padrão em `http://localhost:3000`), abra o **Insomnia**.
+- Com a API rodando (por padrão em `http://localhost:3001`), abra o **Insomnia**.
 - Crie ou importe suas requisições e comece a interagir de forma simulada com todos os endpoints disponíveis!
