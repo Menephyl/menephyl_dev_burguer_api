@@ -8,7 +8,7 @@ const authMiddleware = (request, response, next) => {
         return response.status(401).json({ error: 'Token not provided. Make login again to get a new token  aa' });
     }
 
-    const token = authToken.split(' ')[1];
+    const token = authToken.split(' ')[1];  //    const {, token] = authToken.split(' ')   
 
     try {
         jwt.verify(token, authConfig.secret, (error, decoded) => {
